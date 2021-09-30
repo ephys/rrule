@@ -28,7 +28,8 @@
     "build": "npm run lint && rm -rf dist && tsc",
     "lint": "tslint --project . --fix --config tslint.json",
     "test": "TS_NODE_PROJECT=tsconfig.test.json mocha **/*.test.ts",
-    "test-ci": "TS_NODE_PROJECT=tsconfig.test.json nyc mocha **/*.test.ts"
+    "test-ci": "TS_NODE_PROJECT=tsconfig.test.json nyc mocha **/*.test.ts",
+    "prepublishOnly": "npm run build"
   },
   "nyc": {
     "extension": [
