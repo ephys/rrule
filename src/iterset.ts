@@ -1,9 +1,9 @@
-import IterResult from './iterresult'
-import RRule from './rrule'
-import { DateWithZone } from './datewithzone'
-import { iter } from './iter/index'
-import dateutil from './dateutil'
-import { QueryMethodTypes, IterResultType } from './types'
+import IterResult from './iterresult.js'
+import RRule from './rrule.js'
+import { DateWithZone } from './datewithzone.js'
+import { iter } from './iter/index.js'
+import dateutil from './dateutil.js'
+import { QueryMethodTypes, IterResultType } from './types.js'
 
 export function iterSet <M extends QueryMethodTypes> (
   iterResult: IterResult<M>,

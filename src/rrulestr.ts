@@ -1,9 +1,9 @@
-import RRule from './rrule'
-import RRuleSet from './rruleset'
-import dateutil from './dateutil'
-import { includes, split } from './helpers'
-import { Options } from './types'
-import { parseString, parseDtstart } from './parsestring'
+import RRule from './rrule.js'
+import RRuleSet from './rruleset.js'
+import dateutil from './dateutil.js'
+import { includes, split } from './helpers.js'
+import { Options } from './types.js'
+import { parseString, parseDtstart } from './parsestring.js'
 
 export interface RRuleStrOptions {
   dtstart: Date | null

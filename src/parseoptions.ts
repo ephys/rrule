@@ -1,9 +1,9 @@
-import { Options, ParsedOptions, freqIsDailyOrGreater } from './types'
-import { includes, notEmpty, isPresent, isNumber, isArray, isWeekdayStr } from './helpers'
-import RRule, { defaultKeys, DEFAULT_OPTIONS } from './rrule'
-import dateutil from './dateutil'
-import { Weekday } from './weekday'
-import { Time } from './datetime'
+import { Options, ParsedOptions, freqIsDailyOrGreater } from './types.js'
+import { includes, notEmpty, isPresent, isNumber, isArray, isWeekdayStr } from './helpers.js'
+import RRule, { defaultKeys, DEFAULT_OPTIONS } from './rrule.js'
+import dateutil from './dateutil.js'
+import { Weekday } from './weekday.js'
+import { Time } from './datetime.js'
 
 export function initializeOptions (options: Partial<Options>) {
   const invalid: string[] = []

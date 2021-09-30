@@ -1,8 +1,8 @@
-import ENGLISH, { Language } from './i18n'
-import RRule from '../index'
-import { Options, ByWeekday } from '../types'
-import { Weekday } from '../weekday'
-import { isArray, isNumber, isPresent, padStart } from '../helpers'
+import ENGLISH, { Language } from './i18n.js'
+import { RRule } from '../index.js'
+import { Options, ByWeekday } from '../types.js'
+import { Weekday } from '../weekday.js'
+import { isArray, isNumber, isPresent, padStart } from '../helpers.js'
 
 // =============================================================================
 // Helper functions

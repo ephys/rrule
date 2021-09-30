@@ -1,7 +1,7 @@
-import ENGLISH, { Language } from './i18n'
-import RRule from '../index'
-import { Options } from '../types'
-import { WeekdayStr } from '../weekday'
+import ENGLISH, { Language } from './i18n.js'
+import { RRule } from '../index.js'
+import { Options } from '../types.js'
+import { WeekdayStr } from '../weekday.js'
 
 // =============================================================================
 // Parser

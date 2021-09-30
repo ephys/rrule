@@ -1,7 +1,7 @@
-import { ParsedOptions } from '../types'
-import dateutil from '../dateutil'
-import { empty, repeat, pymod, includes } from '../helpers'
-import { M365MASK, MDAY365MASK, NMDAY365MASK, WDAYMASK, M365RANGE, M366MASK, MDAY366MASK, NMDAY366MASK, M366RANGE } from '../masks'
+import { ParsedOptions } from '../types.js'
+import dateutil from '../dateutil.js'
+import { empty, repeat, pymod, includes } from '../helpers.js'
+import { M365MASK, MDAY365MASK, NMDAY365MASK, WDAYMASK, M365RANGE, M366MASK, MDAY366MASK, NMDAY366MASK, M366RANGE } from '../masks.js'
 
 export interface YearInfo {
   yearlen: 365 | 366

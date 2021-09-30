@@ -1,8 +1,8 @@
 {
   "name": "rrule",
-  "version": "2.6.8",
+  "version": "3.0.0",
   "description": "JavaScript library for working with recurrence rules for calendar dates.",
-  "homepage": "http://jakubroztocil.github.io/rrule/",
+  "homepage": "https://jakubroztocil.github.io/rrule/",
   "license": "BSD-3-Clause",
   "keywords": [
     "dates",
@@ -12,21 +12,21 @@
     "rfc"
   ],
   "author": "Jakub Roztocil, Lars Schöning, and David Golightly",
-  "main": "dist/es5/rrule.js",
-  "module": "dist/esm/src/index.js",
-  "typings": "dist/esm/src/index.d.ts",
+  "main": "dist/index.js",
+  "type": "module",
+  "sideEffects": false,
   "repository": {
     "type": "git",
     "url": "git://github.com/jakubroztocil/rrule.git"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lint"
+      "pre-commit": "npm run lint"
     }
   },
   "scripts": {
-    "build": "yarn lint && tsc && webpack && tsc dist/esm/**/*.d.ts",
-    "lint": "yarn tslint --project . --fix --config tslint.json",
+    "build": "npm run lint && rm -rf dist && tsc",
+    "lint": "tslint --project . --fix --config tslint.json",
     "test": "TS_NODE_PROJECT=tsconfig.test.json mocha **/*.test.ts",
     "test-ci": "TS_NODE_PROJECT=tsconfig.test.json nyc mocha **/*.test.ts"
   },

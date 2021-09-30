@@ -1,7 +1,7 @@
-import dateutil from '../dateutil'
-import Iterinfo from '../iterinfo/index'
-import { pymod, isPresent, includes } from '../helpers'
-import { Time } from '../datetime'
+import dateutil from '../dateutil.js'
+import Iterinfo from '../iterinfo/index.js'
+import { pymod, isPresent, includes } from '../helpers.js'
+import { Time } from '../datetime.js'
 
 export function buildPoslist (bysetpos: number[], timeset: Time[], start: number, end: number, ii: Iterinfo, dayset: (number | null)[]) {
   const poslist: Date[] = []

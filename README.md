@@ -3,7 +3,28 @@ rrule.js
 
 **Library for working with recurrence rules for calendar dates.**
 
-[![NPM version][npm-image]][npm-url]
+This is a fork of [jakubroztocil/rrule](https://github.com/jakubroztocil/rrule) that includes new features and bugfixes.
+
+**Main Differences:**
+- Is compatible with Node and Browsers native ECMAScript modules. (You can still bundle though).
+- Does not transpile native features by default to reduce bundle size. (it's up to you to decide if you want extra boilerplate by transpiling for old browsers).
+- Adds methods `isFinite`, `last`, `first` to `RRule` & `RRuleSet`.
+- `count` does not crash if the RRule is infinite (returns `Number.POSITIVE_INFINITY`).
+- Calling the method `#all` on an infinite RRuleSet throws instead of looping forever.
+- Stricter inputs (throws more often when received inputs are wrong).
+
+**Intended changes:**
+- Fix issue https://github.com/jakubroztocil/rrule/issues/413.
+- Replace `rrulestr` with `parseRrule` & `parseRruleSet` to keep return types consistent.
+- Make RRule & RRuleSet immutables.
+- Make RRule & RRuleSet implement a common interface but not inherit from each-other.
+- Add `isEmpty` to RRuleSet & RRule.
+- Add a method to RRuleSet to remove all contained RRules that are empty.
+- Be stricter for RRule options (`until` currently converts `false` into Date(0))
+- Replace Date & Luxon with the native Temporal API.
+- Normalize arrays in parsedOptions (they should not sometimes be an empty array and sometimes null. Always an empty array).
+
+[![npm version][npm-image]][npm-url]
 [![Build Status][ci-image]][ci-url]
 [![js-standard-style][js-standard-image]][js-standard-url]
 [![Downloads][downloads-image]][downloads-url]
@@ -23,40 +44,23 @@ to natural language.
 
 ### Quick Start
 
--   [Demo app](http://jakubroztocil.github.io/rrule/)
+-   [Demo app](https://jakubroztocil.github.io/rrule/)
 
-#### Client Side
+#### Install
 
-```bash
-$ yarn add rrule
-```
-
-Alternatively, download manually:
-
- * [rrule.min.js](https://jakubroztocil.github.io/rrule/dist/es5/rrule.min.js) (bundled, minified)
- * [rrule.js](https://jakubroztocil.github.io/rrule/dist/es5/rrule.js) (bundled, not minified)
- * [rrule-tz.min.js](https://jakubroztocil.github.io/rrule/dist/es5/rrule-tz.min.js) (with timezone support, bundled, minified)
- * [rrule-tz.js](https://jakubroztocil.github.io/rrule/dist/es5/rrule-tz.js) (with timezone support, bundled, not minified)
-
-```html
-<script src="rrule/dist/es5/rrule.min.js"></script>
-```
-
-#### Server Side
-
-Includes optional TypeScript types
+Includes TypeScript types
 
 ```bash
-$ yarn add rrule
+$ yarn add @ephys/rrule
 # or
-$ npm install rrule
+$ npm install @ephys/rrule
 ```
 
 #### Usage
 
 **RRule:**
 ```es6
-import { RRule, RRuleSet, rrulestr } from 'rrule'
+import { RRule, RRuleSet, rrulestr } from '@ephys/rrule'
 
 // Create a rule:
 const rule = new RRule({
@@ -824,4 +828,3 @@ more details.
 #### Related projects
 
 * https://rrules.com/ — RESTful API to get back occurrences of RRULEs that conform to RFC 5545.
-

@@ -1,4 +1,4 @@
-import { range, repeat, clone } from './helpers'
+import { range, repeat, clone } from './helpers.js'
 
 // =============================================================================
 // Date masks

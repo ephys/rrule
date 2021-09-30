@@ -1,4 +1,4 @@
-import dateutil from './dateutil'
+import dateutil from './dateutil.js'
 import { DateTime } from 'luxon'
 
 export class DateWithZone {

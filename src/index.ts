@@ -14,17 +14,13 @@
  *
  */
 
-import RRule from './rrule'
-import RRuleSet from './rruleset'
+export { default as RRule } from './rrule.js'
+export { default as RRuleSet } from './rruleset.js'
+export { rrulestr } from './rrulestr.js'
+export type { RRuleStrOptions } from './rrulestr.js'
 
-export { rrulestr } from './rrulestr'
-export { Frequency, ByWeekday, Options } from './types'
-export { Weekday, WeekdayStr } from './weekday'
-export { RRuleStrOptions } from './rrulestr'
+export { Frequency } from './types.js'
+export type { ByWeekday, Options } from './types.js'
 
-export {
-  RRule,
-  RRuleSet
-}
-
-export default RRule
+export { Weekday } from './weekday.js'
+export type { WeekdayStr } from './weekday.js'

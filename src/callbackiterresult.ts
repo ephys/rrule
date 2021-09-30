@@ -1,4 +1,4 @@
-import IterResult, { IterArgs } from './iterresult'
+import IterResult, { IterArgs } from './iterresult.js'
 
 type Iterator = (d: Date, len: number) => boolean
 

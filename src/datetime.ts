@@ -1,6 +1,6 @@
-import { ParsedOptions, Frequency } from './types'
-import { pymod, divmod, empty, includes } from './helpers'
-import { dateutil } from './dateutil'
+import { ParsedOptions, Frequency } from './types.js'
+import { pymod, divmod, empty, includes } from './helpers.js'
+import { dateutil } from './dateutil.js'
 
 export class Time {
   public hour: number

@@ -1,13 +1,13 @@
-import IterResult from '../iterresult'
-import { ParsedOptions, freqIsDailyOrGreater, QueryMethodTypes } from '../types'
-import dateutil from '../dateutil'
-import Iterinfo from '../iterinfo/index'
-import RRule from '../rrule'
-import { buildTimeset } from '../parseoptions'
-import { notEmpty, includes, isPresent } from '../helpers'
-import { DateWithZone } from '../datewithzone'
-import { buildPoslist } from './poslist'
-import { Time, DateTime } from '../datetime'
+import IterResult from '../iterresult.js'
+import { ParsedOptions, freqIsDailyOrGreater, QueryMethodTypes } from '../types.js'
+import dateutil from '../dateutil.js'
+import Iterinfo from '../iterinfo/index.js'
+import RRule from '../rrule.js'
+import { buildTimeset } from '../parseoptions.js'
+import { notEmpty, includes, isPresent } from '../helpers.js'
+import { DateWithZone } from '../datewithzone.js'
+import { buildPoslist } from './poslist.js'
+import { Time, DateTime } from '../datetime.js'
 
 export function iter <M extends QueryMethodTypes> (iterResult: IterResult<M>, options: ParsedOptions) {
   const {
